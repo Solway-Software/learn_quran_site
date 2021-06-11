@@ -1,0 +1,197 @@
+.page-container {
+    position: relative;
+}
+.bg1-color {
+    width: 100%;
+    height: 84rem;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+.home-flex {
+    grid-column: 2 / 12;
+    display: flex;
+    flex-direction: column;
+}
+.section-one-flex img {
+    width: 100%;
+    height: 378px;
+    object-fit: contain;
+}
+.section-one-flex h3 {
+    font-family: 'Cairo', sans-serif;
+}
+.section-one-flex h2 {
+    font-family: 'Cairo', sans-serif;
+}
+.section-btn {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    border-radius: 2rem;
+}
+.section-two-flex {
+    display: flex;
+    flex-direction: column;
+}
+.section-two-flex img {
+    display: none;
+    width: 100%;
+    height: 650px;
+    margin-top: 4rem;
+    object-fit: contain;
+}
+.section-three-flex {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6rem;
+}
+.section-three-flex > img {
+    display: none;
+    width: 100%;
+    object-fit: contain;
+    height: 430px;
+}
+.home-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin-bottom: 3rem;
+}
+.home-card > img {
+    width: 40px;
+    height: 37px;
+    margin-bottom: 1rem;
+}
+.home-card h3 {
+    margin: 0;
+}
+
+// shered 
+.primary-font {
+    font-family: 'Playfair Display', serif;
+}
+.secondary-font {
+    font-family: 'Montserrat', sans-serif;
+}
+.primary-color {
+    color: $main-color;
+}
+.secondary-color {
+    color: $primary-color;
+}
+.color-white {
+    color: $off-white;
+}
+.bg-primary-color {
+    background-color: $main-color;
+}
+.bg-secondary-color {
+    background-color: $primary-color;
+}
+.font-bold {
+    font-weight: bold;
+}
+.font-500 {
+    font-weight: 500;
+}
+.font-400 {
+    font-weight: 400;
+}
+.font-light {
+    font-weight: 400;
+}
+.mt1 {
+   margin-top: 1rem; 
+}
+.mt2 {
+    margin-top: 2rem; 
+}
+.mt3 {
+    margin-top: 3rem; 
+}
+.mt4 {
+    margin-top: 4rem; 
+}
+.mt6 {
+    margin-top: 6rem; 
+}
+.rtl {
+    text-align: right;
+}
+h1, h2, h3 {
+    margin: 0;
+}
+@media (min-width: 458px) {
+    .bg1-color {
+        height: 80rem;
+    }
+}
+@media (min-width: 518px) {
+    .bg1-color {
+        height: 76rem;
+    }
+}
+@media (min-width: 618px) {
+    .bg1-color {
+        height: 72rem;
+    }
+}
+@media (min-width: 768px) {
+    .section-one-flex {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         align-items: center;
+         gap: 2rem;
+    }
+    .section-one-flex > IMG {
+        margin-left: 3rem;
+    }
+    .bg1-color {
+        height: 44rem;
+        top: 28rem;
+    }
+    .section-two-flex {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 2rem;
+   }
+    .section-two-flex img {
+        display: block;
+    }
+    .home-card {
+        display: grid;
+        grid-template-columns: 0.3fr 1fr;
+        grid-auto-rows: minmax(30px, auto);
+        justify-items: start;
+        column-gap: 1rem;
+        margin-bottom: 3rem;
+    }
+    .home-card img {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        justify-self: end;
+        align-self: center;
+    }
+    .section-one-flex  h3 {
+        color: #444;
+    }
+    .section-one-flex  h1 {
+        color: #444;
+        text-align: right;
+    }
+    .section-one-flex button {
+        background-color: $primary-color;
+    }
+}
+@media (min-width: 992px) {
+  .section-three-flex {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 4rem;
+   }
+   .section-three-flex > img {
+       display: block;
+   }
+}

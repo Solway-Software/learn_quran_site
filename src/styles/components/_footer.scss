@@ -1,0 +1,134 @@
+.footer-container {
+    padding: 5rem $page-spacing; 
+    background-color: #103759;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+}
+
+
+.footer-col-margin {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.footer-col-title {
+    color: $main-color;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 2rem;
+}
+
+.footer-co1__row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer-co1__row img {
+    width: 30px;
+    height: 30px;
+    margin-right: 2rem;
+}
+
+.footer-co1__row h6 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1rem;
+    color: $off-white;
+}
+
+.footer__social {
+    margin-right: 1rem;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-col2-link {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: $main-color;
+    margin-bottom: 0.2rem;
+    font-size: 14px;
+    transition: all 0.3s ease 0s;
+}
+
+.footer-col2-link:hover {
+    color: $mian-hove-color;
+}
+
+.footer-col2-image-avater {
+    width: 60px;
+    height: 60px;
+    border-radius: .5rem;
+    margin-right: 1rem;
+}
+
+.footer-input-style {
+    height: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    border-radius: 2rem;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-input-style:focus {
+    outline: none;
+}
+
+.footer-col p {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: $off-white;
+}
+
+.footer-form-button {
+    height: 3rem;
+    border-radius: 2rem;
+    background-color: $main-color;
+    color: $off-white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    border: none;
+}
+
+.footer-form-button:focus {
+    outline: none;
+}
+
+.copyright {
+    margin: 0;
+    padding-bottom: 2rem;
+    color: $off-white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    text-align: center;
+    background-color: #103759;
+}
+
+@media (max-width: 1300px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer__col3 {
+        margin-top: 6rem;
+    }
+}
+
+@media (max-width: 830px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer__col2 {
+        margin-top: 6rem;
+    }
+}
+
+@media (max-width: 750px) {
+    .footer-container {
+        padding: 4rem 1rem;
+    }
+}

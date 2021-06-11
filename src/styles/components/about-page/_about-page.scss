@@ -1,0 +1,159 @@
+// constant
+// color
+$c-gold: #dfbe70;
+$c-blue: #185285;
+$c-white: #fff;
+$c-black: #333;
+// shared 
+.page-title, .page-sub-title, .section-title, .card-title {
+    font-weight: 500;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+}
+.page-title {
+    font-size: 32px;
+    color: $c-gold;
+}
+.page-sub-title {
+    font-size: 24px;
+    color: $c-blue;
+    font-weight: 700;
+}
+.section-title {
+    font-size: 28px;
+    color: $c-gold;
+}
+.card-title {
+    font-size: 20px;
+    color: $c-gold;
+}
+// .card-body {
+//     color: $c-black;
+//     font-size: 12;
+// }
+@mixin button-1($dir) {
+    padding: 1rem 2rem;
+    text-align: center;
+    background-color: $c-gold;
+    font-style: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border: none;
+    color: $c-white;
+    border-radius: 2rem;
+    float: $dir;
+    &:foucs {
+        outline: none;
+    }
+}
+
+// layout
+.page-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(150px, auto);
+}
+.page-grid-bg {
+    grid-column: 1 / 13;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: $c-blue;
+}
+.page-space {
+    grid-column: 2 / 12;
+    align-self: center;
+    margin: 2rem 0;
+}
+
+
+//page style
+.grid-section-one {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 400px;
+    align-items: center;
+    margin-bottom: 4rem;
+    gap: 1rem;
+    img {
+        width: 100%;
+    }
+    .body {
+        color: $c-white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+    }
+}
+.section-two {
+    margin: 6rem 0;
+    .about-card-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 300px;
+        .about-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .about-card-body {
+                @extend .body;
+                color: $c-black;
+                text-align: center;
+            }
+            img {
+                width: 50px;
+                height: 50px;
+                object-fit: contain;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+@mixin section-dis ($color, $grid-col: 1fr) {
+    display: grid;
+    grid-template-columns: $grid-col;
+    grid-auto-rows: 500px;
+    gap: 1rem;
+    margin: 3rem 0;
+    align-items: center;
+    .section-three-body {
+        color: $color;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .car-button {
+        @include button-1(right);
+        margin: 2rem;
+    }
+    img {
+        width: 100%;
+        object-fit: contain;
+        height: 500px;
+    }
+}
+
+.section-three {
+    @include section-dis($c-white)
+}
+.section-four {
+    @include section-dis($c-black)
+}
+
+
+@media (min-width: 768px) {
+    .grid-section-one {
+        grid-template-columns: 0.5fr 1fr;
+    }
+    .section-two {
+        .about-card-container {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+    }
+    .section-three {
+        @include section-dis($c-white, repeat(2, 1fr))
+    }
+    .section-four {
+        @include section-dis($c-black, repeat(2, 1fr))
+    }
+}

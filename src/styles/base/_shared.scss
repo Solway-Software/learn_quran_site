@@ -1,0 +1,49 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+// space
+.space-v2 {
+    height: 2rem;
+}
+.space-v3 {
+    height: 3rem;
+}
+.space-v4 {
+    height: 4rem;
+}
+.space-v6 {
+    height: 6rem;
+}
+
+.space-h2 {
+    width: 2rem;
+}
+.space-h3 {
+    width: 3rem;
+}
+.space-h4 {
+    width: 4rem;
+}
+
+// button
+.btn-1 {
+    float: right;
+    padding: 0.7rem 2rem;
+    border: none;
+    border-radius: 1.3rem;
+    font-weight: bold;
+    color: $off-white;
+    background-color: rgb(216, 182, 0);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.btn-1:focus {
+    outline: none;
+}
+
+.btn-1:hover {
+    background-color: $mian-hove-color;
+}

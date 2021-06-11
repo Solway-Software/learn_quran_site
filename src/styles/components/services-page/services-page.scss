@@ -1,0 +1,86 @@
+.services-flex {
+    grid-column: 2 / 12;
+    display: flex;
+    flex-direction: column;
+    position:relative;
+}
+
+//style
+h1, h2 {
+    margin: 0;
+}
+
+.services-header h1 {
+    color: $main-color;
+    font-weight: 200;
+    font-family: 'Playfair Display', serif;
+}
+.services-header h2 {
+    color: $primary-color;
+    font-family: 'Playfair Display', serif;
+}
+.services-header p {
+    color: #777;
+    font-family: 'Montserrat', sans-serif;
+}
+.services-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 30rem;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    background-color: $off-white;
+    border-radius: 2rem;
+}
+.services-card img {
+    width: 60px;
+    height: 60px;
+}
+.services-card h2 {
+    color: $main-color;
+    font-family: 'Playfair Display', serif;
+}
+.services-card p {
+    text-align: justify;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+}
+.services-card button {
+    padding: 0.5rem 3rem;
+    background-color: #f8f9fa;
+    color: #212529;
+    font-weight: 200;
+}
+.services-intersted h1 {
+    color: $primary-color;
+    font-family: 'Playfair Display', serif;
+    font-weight: 200;
+}
+.services-intersted h2 {
+    color: $main-color;
+    font-family: 'Playfair Display', serif;
+}
+.services-intersted p {
+    font-family: 'Montserrat', sans-serif;
+    color: #777;
+}
+
+@media (min-width: 768px) {
+    .services-card-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .services-card {
+        margin: 1rem;
+    }
+}
+@media (min-width: 992px) {
+    .services-card-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+

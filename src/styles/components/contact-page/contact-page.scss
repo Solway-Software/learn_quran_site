@@ -1,0 +1,118 @@
+ .contact-container {
+     position: relative;
+ }
+.contact-grid-container{
+    background-color: $primary-color;
+    position: absolute;
+    top: 11rem;
+    height: 70rem;
+    width: 100%;
+    z-index: -1;
+}
+.contact-flex {
+     grid-column: 2 / 12;
+     display: flex;
+     flex-direction: column;
+}
+h1, h2 {
+    margin: 0;
+}
+.contact-header h1 {
+    color: $main-color;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+}
+.contact-header h2 {
+    color: $primary-color;
+    font-family: 'Playfair Display', serif;
+}
+.contact-flex-content {
+    display: flex;
+    flex-direction: column;
+    color: $off-white;
+}
+.contact-flex-content h1{
+    font-weight: 200;
+    color: $main-color;
+    font-family: 'Playfair Display', serif;
+}
+.contact-flex-content h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+.contact-content-card {
+    display: flex;
+    flex-direction: column;
+}
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 6rem;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    background-color: $off-white;
+    border-radius: 2rem;
+}
+.contact-card img {
+    width: 40px;
+    height: 40px;
+}
+.contact-card p {
+    font-family: 'Montserrat', sans-serif;
+}
+.contact-flex a {
+    text-decoration: none;
+    color: $main-color;    
+    font-family: 'Montserrat', sans-serif;
+}
+.contact-flex a:hover {
+    color: $mian-hove-color;
+} 
+.contact-form {
+    grid-column: 1 / 13;
+    border-radius: 4rem;
+    height: 30rem;
+    align-items: center;
+    margin-bottom: 8rem;
+}
+.contact-form h2 {
+    font-weight: 400;
+    color: $primary-color;
+    font-family: 'Playfair Display', serif;
+}
+.contact-form-label {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    color: #666;
+}
+.contact-form-input {
+    width: 100%;
+    margin-top: 0.2rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0.2rem;
+    border: 1px solid rgba(185, 185, 185, 0.377);
+    border-radius: 0.1rem;
+    transition: .35s ease-in-out;
+}
+.contact-form-btn {
+    background-color: $primary-color;
+    font-weight: 200;
+}
+@media (min-width: 992px) {
+    .contact-content-card {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .contact-card {
+        flex: 1;
+        margin: 0 1rem;
+    }
+    .contact-form {
+        grid-column: 2 / 12;
+        margin-bottom: 8rem;
+    }
+    .contact-grid-container{
+        height: 35rem;
+    }
+}
